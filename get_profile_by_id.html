@@ -1,0 +1,25 @@
+<!-- templates/get_profile_by_id.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Profile Details</h1>
+        <p>ID: {{ profile.id }}</p>
+        <p>Login: {{ profile.login }}</p>
+        <p>Account: {{ profile.account }}</p>
+        <p>Nationality: {{ profile.nationality }}</p>
+
+        <a href="{{ url_for('get_profiles') }}" class="btn btn-secondary">Back to Profiles</a>
+        <a href="{{ url_for('update_profile_by_id', id=profile.id) }}" class="btn btn-warning">Edit</a>
+        <form method="post" action="{{ url_for('delete_profile_by_id', id=profile.id) }}" style="display: inline;">
+            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this profile?')">Delete</button>
+        </form>
+    </div>
+</body>
+</html>

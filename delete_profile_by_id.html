@@ -1,0 +1,23 @@
+<!-- templates/delete_profile_by_id.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Delete Profile</h1>
+        <p>ID: {{ deleted_profile.id }}</p>
+        <p>Login: {{ deleted_profile.login }}</p>
+        <p>Account: {{ deleted_profile.account }}</p>
+        <p>Nationality: {{ deleted_profile.nationality }}</p>
+        <form method="post" action="{{ url_for('delete_profile_by_id', id=deleted_profile.id) }}">
+            <!-- Add delete confirmation and Bootstrap styles here -->
+        </form>
+    </div>
+</body>
+</html>

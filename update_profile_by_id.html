@@ -1,0 +1,38 @@
+<!-- templates/update_profile_by_id.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Profile</h1>
+        <form method="post" action="{{ url_for('update_profile_by_id', id=updated_profile.id) }}" class="mt-3">
+            <div class="form-group">
+                <label for="login">Login:</label>
+                <input type="text" class="form-control" id="login" name="login" value="{{ updated_profile.login }}" required>
+            </div>
+            <div class="form-group">
+                <label for="account">Account:</label>
+                <input type="number" class="form-control" id="account" name="account" value="{{ updated_profile.account }}" required>
+            </div>
+            <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <input type="text" class="form-control" id="nationality" name="nationality" value="{{ updated_profile.nationality }}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-aG2cbStQ5o0pZZSS3X6LFX5AZqOtL2evb4Whl8xkePfYQlYNygQ1LrB5ZwlvKvY"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIdQHiE436S+6Y4aGgBz4jDgJL3ddN"
+        crossorigin="anonymous"></script>
+</body>
+</html>
